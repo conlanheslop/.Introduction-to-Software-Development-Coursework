@@ -1,0 +1,6 @@
+nbproject/private/*
+dist/*
+build/*
+target/*
+lib/*
+.vscode/
