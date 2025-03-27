@@ -1,3 +1,5 @@
+<%@page import="model.User"%>
+
 <html>
 
 <%
@@ -7,6 +9,10 @@
     String gender = request.getParameter("Gender");
     String colour = request.getParameter("Favourite Colour");
     String tos = request.getParameter("TOS");
+
+    // User JavaBean instance
+    User user = new User(name, email, password, gender, colour);
+    session.setAttribute("user", user);
 
 %> 
 
@@ -24,6 +30,8 @@
         Your password is, <%= password%>! </br>
         Your gender is, <%= gender%>! </br>
         Your favourite colour is, <%= colour%>! </br>
+        Click <a href="index.jsp">here</a> to proceed to the main page. <br />
+
 
     <%-- if tos isn't agreed to --%>
     <%
